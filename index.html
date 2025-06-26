@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог товаров</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌐 Логотип</div>
+    <h1>Каталог</h1>
+    <nav>
+      <button data-filter="all" class="active">Все</button>
+      <button data-filter="A">Категория A</button>
+      <button data-filter="B">Категория B</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="slider" class="slider">
+      <img id="sliderImage" src="" alt="Random Dog" />
+      <button id="nextImage">Следующее изображение</button>
+    </section>
+
+    <section id="items" class="grid"></section>
+    <button id="openForm">Оставить отзыв</button>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Форма обратной связи</h2>
+      <form id="feedbackForm">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+        <p id="formMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Макет в Figma: <a href="https://figma.com" target="_blank">открыть</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
