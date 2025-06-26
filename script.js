@@ -84,20 +84,3 @@ document.addEventListener("DOMContentLoaded", () => {
     formMessage.textContent = "";
   }
 });
-
-  // Слайдер с Dog API
-  const sliderImage = document.getElementById("sliderImage");
-  const nextImageBtn = document.getElementById("nextImage");
-
-  async function loadDogImage() {
-    try {
-      const response = await fetch("https://dog.ceo/api/breeds/image/random");
-      const data = await response.json();
-      sliderImage.src = data.message;
-    } catch (error) {
-      sliderImage.alt = "Ошибка загрузки изображения";
-    }
-  }
-
-  nextImageBtn.addEventListener("click", loadDogImage);
-  loadDogImage();
